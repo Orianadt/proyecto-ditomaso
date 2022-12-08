@@ -1,0 +1,23 @@
+.card{
+    width: 200px;
+    margin: 60px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .card__imagen{
+        width: 100%;
+        border-radius: 5px;
+    }
+    .card-texto{
+        text-align: center;
+        margin-top: 10px;
+    }
+    .contenedorcards{
+        display: inline-flex;
+    }
+    .tituloinicio{
+        margin-left: 60px;
+        margin-top: 40px;
+        text-decoration: underline;
+    }
+}

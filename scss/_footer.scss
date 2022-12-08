@@ -1,0 +1,23 @@
+.footer{
+    background-color: rgba(196, 187, 187, 0.623);
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 45px;
+    display: flex;
+    .titulo__footer{
+        margin-bottom: 10px;
+    }
+    .redes{
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        margin-right: 10px;
+    }
+    .footer ul {
+        list-style-type: none;
+        color: black;
+    }
+}

@@ -1,0 +1,23 @@
+.img-nosotros{
+    display:inline;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    margin-left: 400px;
+    padding: 20px;
+    .contenedorimg{
+        width: 450px;
+        height: 50px;
+    }
+}
+
+.parrafo-nosotros{
+    width: 700px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    margin-left: 280px;
+    padding: 20px;
+     
+}

@@ -1,0 +1,64 @@
+@import "reset";
+@import "card";
+@import "nav";
+@import "extend";
+@import "aside";
+@import "footer";
+@import "formulario";
+@import "nosotros";
+$h1Desktop: 34px;
+$h4Desktop: 28px;
+$pDesktop: 22px;
+$h1Mobile: 22px;
+$h4Mobile: 18px;
+$pMobile: 14px;
+.btn{
+    @extend %btn
+}
+.body{
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: (4,auto);
+    grid-template-areas: "nav    nav    nav    nav"
+                         "main   main   main   main"
+                         "aside  aside  aside  aside"
+                         "footer footer footer footer";
+}
+.main{
+    grid-area: main;
+}
+.footer{
+    grid-area: footer;
+}
+.aside{
+    grid-area: aside;
+} 
+@media(max-width:720px){
+    .body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "nav"
+                             "main"
+                             "aside"
+                             "footer";
+    }
+}
+.body{
+@if $vista == desktop {
+    @media only screen and (min-width: 1024px){
+        h1{font-size:$h1Desktop;}
+        h2{font-size:24px;}
+        h4{font-size:$h4Desktop}
+        p{font-size:$pDesktop;}
+    };
+}
+@else if $vista == mobile {
+    @media only screen and (max-width:720px) {
+        h1{font-size:$h1Mobile;}
+        h2{font-size:20px;}
+        h4{font-size:$h4Mobile;}
+        p{font-size:$pMobile;}
+    }
+}
+}
