@@ -7,6 +7,8 @@
   width: 200px;
   margin: 60px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 .card .card__imagen {
@@ -57,7 +59,6 @@
   color: aliceblue;
   padding: 8px;
   margin: 10px;
-  margin-left: 65px;
 }
 
 .aside {
@@ -65,6 +66,8 @@
   height: 50px;
   background-color: rgb(99, 95, 95);
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .aside .texto-aside {
   display: flex;
@@ -77,8 +80,7 @@
 }
 
 .footer {
-  background-color: rgba(196, 187, 187, 0.623);
-  height: 100px;
+  background-color: rgb(214, 211, 211);
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -87,12 +89,16 @@
 }
 .footer .titulo__footer {
   margin-bottom: 10px;
+  font-size: x-large;
+  font-weight: bold;
+  list-style-type: none;
+ 
 }
 .footer .redes {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 45px;
   height: 45px;
-  line-height: 45px;
   margin-right: 10px;
 }
 .footer .footer ul {
@@ -145,7 +151,10 @@
   display: grid;
   grid-template-columns: 1fr, 1fr, 1fr, 1fr;
   grid-template-rows: 4, auto;
-  grid-template-areas: "nav    nav    nav    nav" "main   main   main   main" "aside  aside  aside  aside" "footer footer footer footer";
+  grid-template-areas: "nav    nav    nav    nav" 
+                       "main   main   main   main" 
+                       "aside  aside  aside  aside" 
+                       "footer footer footer footer";
 }
 
 .main {
@@ -165,6 +174,9 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "nav" "main" "aside" "footer";
+    grid-template-areas: "nav" 
+                         "main" 
+                         "aside" 
+                         "footer";
   }
 }
