@@ -40,14 +40,28 @@
 .form{
     width: 150px;
 }
-.contenedor-rutina{
-    display: flex;
-   justify-content: start;
+
 }
-.contenedor-info{
-    justify-content: start;
+@media (max-width:400px){
+    .footer{
+        background-color: rgba(196, 187, 187, 0.623);
+        height: 50px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        .titulo__footer{
+           visibility: hidden;
+        }
+        .li{
+            visibility: hidden;
+        }
+        .footer ul {
+            visibility: hidden;
+        }
+      }
 }
-}
+
 .contenedor-contacto{
     align-items: center;
     justify-content: center;
@@ -59,6 +73,7 @@
 }
 }
 .contenedor-info{
+   width: 100%;
    align-items: center;
    justify-content: center;
    display: flex;
@@ -66,21 +81,16 @@
 
 .img-info{
     width: 250px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
-.texto-info{
-    text-align: center;
-    width: 500px;
-    }
     .titulo-info{
         text-align: center;
+        display: flex;
     }
 }
-.titulo-pieles{
-    font-size: large;
-    font-weight: bold;
-   
-}
+
 .contenedor-rutina{
     justify-content: center;
     align-items: center;
@@ -92,5 +102,18 @@
     }
     .texto-rutina{
         width: 500px;
+    }
+}
+.contenedor-pieles{
+    width: 100%;
+    display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+
+    .titulo-pieles{
+        font-size: large;
+        font-weight: bold;
+        
     }
 }
