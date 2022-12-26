@@ -1,64 +1,96 @@
 @import "reset";
-@import "card";
 @import "nav";
 @import "extend";
 @import "aside";
 @import "footer";
 @import "formulario";
-@import "nosotros";
-$h1Desktop: 34px;
-$h4Desktop: 28px;
-$pDesktop: 22px;
-$h1Mobile: 22px;
-$h4Mobile: 18px;
-$pMobile: 14px;
+@import "index";
+
 .btn{
     @extend %btn
 }
-.body{
-    display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
-    grid-template-rows: (4,auto);
-    grid-template-areas: "nav    nav    nav    nav"
-                         "main   main   main   main"
-                         "aside  aside  aside  aside"
-                         "footer footer footer footer";
+
+@media(max-width:800px){
+    .nav{
+        padding: 0;
+        width: 100%;
+    }
+    .nav ul{
+        position:fixed;
+        top: 0;
+        left: -250px;
+        flex-direction: column;
+        background-color: grey;
+        width: 250px;
+        height: 100vh;
+        transition: 0.2s;
+        padding: 0;
+        z-index: 100;
+       }
+
+.fa-bars{
+    visibility: visible;
 }
-.main{
-    grid-area: main;
+.fa-bars:hover + nav ul{
+    left: 0;
 }
-.footer{
-    grid-area: footer;
+.nav ul:hover{
+    left: 0;
 }
-.aside{
-    grid-area: aside;
-} 
-@media(max-width:720px){
-    .body{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "nav"
-                             "main"
-                             "aside"
-                             "footer";
+.form{
+    width: 150px;
+}
+.contenedor-rutina{
+    display: flex;
+   justify-content: start;
+}
+.contenedor-info{
+    justify-content: start;
+}
+}
+.contenedor-contacto{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+   .img-contacto{
+    width: 250px;
+    padding: 10px;
+}
+}
+.contenedor-info{
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+
+.img-info{
+    width: 250px;
+    justify-content: center;
+}
+.texto-info{
+    text-align: center;
+    width: 500px;
+    }
+    .titulo-info{
+        text-align: center;
     }
 }
-.body{
-@if $vista == desktop {
-    @media only screen and (min-width: 1024px){
-        h1{font-size:$h1Desktop;}
-        h2{font-size:24px;}
-        h4{font-size:$h4Desktop}
-        p{font-size:$pDesktop;}
-    };
+.titulo-pieles{
+    font-size: large;
+    font-weight: bold;
+   
 }
-@else if $vista == mobile {
-    @media only screen and (max-width:720px) {
-        h1{font-size:$h1Mobile;}
-        h2{font-size:20px;}
-        h4{font-size:$h4Mobile;}
-        p{font-size:$pMobile;}
+.contenedor-rutina{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .img-rutina{
+        width: 250px;
+        justify-content: center;
     }
-}
+    .texto-rutina{
+        width: 500px;
+    }
 }

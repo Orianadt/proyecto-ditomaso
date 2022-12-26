@@ -3,43 +3,18 @@
   padding: 0;
 }
 
-.card {
-  width: 200px;
-  margin: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.card .card__imagen {
-  width: 100%;
-  border-radius: 5px;
-}
-.card .card-texto {
-  text-align: center;
-  margin-top: 10px;
-
-}
-.card .contenedorcards {
-  display: flex;
-
-}
-.card .tituloinicio {
-  margin-left: 60px;
-  margin-top: 40px;
-  text-decoration: underline;
-}
-
 .nav {
-  background-image: url(../img/modern-beauty-products-recipients-with-copy-space.jpg);
+  background-image: url(../img/black-marble-patterned-texture-background-marble-thailand-abstract-natural-marble-black-white-design.jpg);
   width: 100%;
-  height: 700px;
-  background-size: cover;
+  height: 300px;
   grid-area: nav;
   display: flex;
 }
 .nav ul {
   list-style-type: none;
   display: inline-flex;
+  justify-content: space-between;
+  padding: 5px;
 }
 .nav li a {
   text-decoration: none;
@@ -51,6 +26,13 @@
   font-weight: bold;
 }
 
+.fa-bars {
+  color: white;
+  padding: 5px;
+  font-size: 24px;
+  visibility: hidden;
+}
+
 .btn {
   display: flex;
   justify-items: center;
@@ -60,6 +42,7 @@
   color: aliceblue;
   padding: 8px;
   margin: 10px;
+  margin-left: 65px;
 }
 
 .aside {
@@ -67,20 +50,19 @@
   height: 50px;
   background-color: rgb(99, 95, 95);
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .aside .texto-aside {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   color: aliceblue;
-  padding-top: 15px;
+  padding: 15px;
   font-size: large;
 }
+
 .footer {
-  background-color: rgb(214, 211, 211);
+  background-color: rgba(196, 187, 187, 0.623);
+  height: 100px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -88,18 +70,9 @@
 }
 .footer .titulo__footer {
   margin-bottom: 10px;
-  font-size: x-large;
-  font-weight: bold;
-  list-style-type: none;
- 
 }
-.footer .redes {
-  display: flex;
-  flex-direction: column;
-  width: 45px;
-  height: 45px;
-  margin-right: 10px;
-  list-style-type: none;
+.footer .li {
+  display: inline;
 }
 .footer .footer ul {
   list-style-type: none;
@@ -108,9 +81,8 @@
 
 .form {
   width: 400px;
-  margin-left: 460px;
-  margin-top: 30px;
-  padding: 50px;
+  align-items: center;
+  padding: 10px;
 }
 .form .iniciosesion {
   text-decoration: underline;
@@ -124,61 +96,103 @@
   font-size: large;
 }
 
-.img-nosotros {
-  display: inline;
-  justify-content: center;
-  align-items: center;
-  width: 450px;
-  margin-left: 400px;
-  padding: 20px;
+.index {
+  text-align: center;
 }
-.img-nosotros .contenedorimg {
-  width: 450px;
-  height: 50px;
+.index .img-index {
+  width: 250px;
+  align-items: center;
+}
+.index .titulos-index {
+  padding: 10px;
+  font-weight: bold;
+}
+.index .texto-index {
+  padding: 10px;
+  text-align: center;
 }
 
-.parrafo-nosotros {
-  width: 700px;
-  text-align: center;
+@media (max-width: 800px) {
+  .nav {
+    padding: 0;
+    width: 100%;
+  }
+  .nav ul {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    flex-direction: column;
+    background-color: grey;
+    width: 250px;
+    height: 100vh;
+    transition: 0.2s;
+    padding: 0;
+    z-index: 100;
+  }
+  .fa-bars {
+    visibility: visible;
+  }
+  .fa-bars:hover + nav ul {
+    left: 0;
+  }
+  .nav ul:hover {
+    left: 0;
+  }
+  .form {
+    width: 150px;
+  }
+  .contenedor-rutina {
+    display: flex;
+    justify-content: start;
+  }
+  .contenedor-info {
+    justify-content: start;
+  }
+}
+.contenedor-contacto {
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  line-height: 20px;
-  margin-left: 280px;
-  padding: 20px;
+}
+.contenedor-contacto .img-contacto {
+  width: 250px;
+  padding: 10px;
 }
 
-.body {
-  display: grid;
-  grid-template-columns: 1fr, 1fr, 1fr, 1fr;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas: "nav    nav    nav    nav" 
-                       "main   main   main   main" 
-                       "aside  aside  aside  aside" 
-                       "footer footer footer footer";
-}
-
-.main {
-  grid-area: main;
+.contenedor-info {
+  align-items: center;
+  justify-content: center;
   display: flex;
- 
+  flex-direction: column;
+}
+.contenedor-info .img-info {
+  width: 250px;
+  justify-content: center;
+}
+.contenedor-info .texto-info {
+  text-align: center;
+  width: 500px;
+}
+.contenedor-info .titulo-info {
+  text-align: center;
 }
 
-.footer {
-  grid-area: footer;
+.titulo-pieles {
+  font-size: large;
+  font-weight: bold;
 }
 
-.aside {
-  grid-area: aside;
+.contenedor-rutina {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
-
-@media (max-width: 820px) {
-  .body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "nav" 
-                         "main" 
-                         "aside" 
-                         "footer";
-  }
+.contenedor-rutina .img-rutina {
+  width: 250px;
+  justify-content: center;
+}
+.contenedor-rutina .texto-rutina {
+  width: 500px;
 }
